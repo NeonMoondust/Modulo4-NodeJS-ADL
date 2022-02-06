@@ -1,0 +1,16 @@
+{
+  "name": "desafio_2_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "nodemon main.js runit --key=123"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jimp": "^0.16.1",
+    "nodemon": "^2.0.15",
+    "yargs": "^17.3.1"
+  }
+}

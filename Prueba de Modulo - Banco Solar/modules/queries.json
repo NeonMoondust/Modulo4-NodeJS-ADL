@@ -1,0 +1,52 @@
+{
+    "prepared_statement": {
+        "user": {
+            "get":{
+                "name": "user_get",
+                "text": "SELECT * FROM usuarios ORDER BY nombre"
+            },
+            "post":{
+                "name": "user_post",
+                "text": "INSERT INTO usuarios(nombre, balance) VALUES ($1, $2) RETURNING *",
+                "values": []
+            },
+            "put":{
+                "name": "user_put",
+                "text": "UPDATE usuarios SET nombre=$2, balance=$3 WHERE id=$1 RETURNING *",
+                "values": []
+            },
+            "delete":{
+                "name": "user_delete",
+                "text": "DELETE FROM usuarios WHERE id=$1 RETURNING *",
+                "values": []
+            },
+            "collateral_deletion":{
+                "name": "transfer_collateral_deletion",
+                "text": "DELETE FROM transferencias WHERE emisor = $1 OR receptor = $1",
+                "values": []
+            }
+        },
+        "transfer": {
+            "get":{
+                "name": "transfer_get",
+                "text": "SELECT * FROM transferencias ORDER BY fecha",
+                "values": []
+            },
+            "post":{
+                "name": "transfer_post",
+                "text": "INSERT INTO transferencias(emisor, receptor, monto, fecha) VALUES ($1, $2, $3, $4) RETURNING *",
+                "values": []
+            },
+            "issuer":{
+                "name": "transfer_issuer",
+                "text": "UPDATE usuarios SET balance = balance - $2 WHERE nombre = $1 RETURNING *",
+                "values": []
+            },
+            "receptor":{
+                "name": "transfer_receptor",
+                "text": "UPDATE usuarios SET balance = balance + $2 WHERE nombre = $1 RETURNING *",
+                "values": []
+            }
+        }
+    }
+}

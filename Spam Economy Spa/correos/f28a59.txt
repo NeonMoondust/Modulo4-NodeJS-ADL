@@ -1,0 +1,13 @@
+Correo: cris.lasiba@gmail.com
+Asunto: HOLA YO
+                        Contenido: <p>este es un mensaje de prueba</p>
+Hola! Los indicadores económicos de hoy son los siguientes:
+
+
+                      El valor del dólar del día de hoy es: 821.87 
+
+                      El valor del euro del día de hoy es: 942.08 
+
+                      El valor de la uf del día de hoy es: 31084.55 
+
+                      El valor de la utm del día de hoy es: 54442

@@ -1,0 +1,8 @@
+*.zip
+*.rar
+ejercicios/
+test/
+./*/node_modules/
+./*/*.zip
+./*/*.rar
+node_modules/
